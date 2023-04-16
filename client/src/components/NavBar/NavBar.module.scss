@@ -1,0 +1,39 @@
+$white: #ffffff;
+$base_padding: 0px 40px;
+
+.link {
+  color: white;
+  font-family: GothamProMedium, sans-serif;
+  font-weight: 500;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+.active {
+  color: #ff0000;
+}
+.NavBar {
+  background-color: rgba(0, 0, 0, 0.578);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $base_padding;
+  position: relative;
+  z-index: 2;
+  &:hover {
+    background-color: #ffffff;
+    transition: 0.7s;
+  }
+}
+.link_wrapper {
+  height: 100%;
+  display: flex;
+  margin-right: 50px;
+  &:hover {
+    background-color: #0026ff;
+  }
+}

@@ -1,0 +1,19 @@
+.card {
+  background-color: #ffffff;
+  max-width: 47.619%;
+  width: 215.25px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.cardImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.cardName {
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 10px;
+}

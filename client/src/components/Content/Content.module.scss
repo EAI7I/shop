@@ -1,0 +1,10 @@
+.content {
+  background-color: #4677ef;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.arrowPrev {
+  transform: rotate(180deg);
+}
