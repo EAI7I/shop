@@ -5,7 +5,7 @@ interface CardProps {
   productItem: {
     imageUrl: string;
     name: string;
-    price: number;
+    price: string | number;
   };
 }
 
@@ -21,7 +21,7 @@ export default function Card({ productItem }: CardProps) {
           className={styles.cardImage}
         ></Image>
         <div className={styles.cardName}>{productItem.name}</div>
-        <div className={styles.cardPrice}>{productItem.price}₽</div>
+        <div className={styles.cardPrice}>{productItem.price}</div>
       </div>
     </>
   );

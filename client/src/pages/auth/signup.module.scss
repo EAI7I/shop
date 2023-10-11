@@ -1,0 +1,151 @@
+.pageWrapper {
+  --gradien-color-first: rgb(225 228 251);
+  --gradien-color-second: rgb(66 113 228);
+  --gradien-color-third: rgb(66 113 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(
+    55deg,
+    var(--gradien-color-first),
+    var(--gradien-color-second),
+    var(--gradien-color-third)
+  );
+  animation: backgroundRotation 10s ease-in-out 0s infinite alternate-reverse;
+  background-size: 200%;
+}
+.authFormWrapper {
+  position: relative;
+  padding: 56px 48px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  width: 1024px;
+  max-width: 80%;
+  min-height: 480px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.authFormWrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.authFormWrapper form input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.toggleContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.9s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+  background: linear-gradient(to right, #5c6bc0, #512da8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 36px;
+}
+.formWrapper {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  position: absolute;
+  padding: 0 60px;
+  border-radius: 10px;
+}
+.signUpForm {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.9s ease-in-out;
+}
+.signInForm {
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.9s ease-in-out;
+}
+.toggleContainer h2 {
+  color: #fff;
+  font-size: 36px;
+}
+.toggleContainer h4 {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.toggleContainer * {
+  margin-bottom: 20px;
+}
+.toggleContainer.signin {
+  transform: translateX(-100%);
+  border-radius: 0px 150px 100px 0px;
+}
+.toggleContainer.signup {
+  transform: translateX(0%);
+}
+.signInForm.signin {
+  opacity: 1;
+  animation: hide 0.6s 0.1s forwards;
+}
+.signUpForm.signup {
+  opacity: 1;
+  animation: hide 0.6s 0.1s forwards;
+}
+.signUpForm.signin {
+  transform: translateX(100%);
+  animation: move 0.6s 0.1s forwards;
+}
+.signInForm.signup {
+  transform: translateX(-100%);
+  animation: move 0.6s 0.1s forwards;
+}
+
+@keyframes backgroundRotation {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 60% 100%;
+  }
+  100% {
+    background-position: 0% 80%;
+  }
+}
+@keyframes move {
+  0%,
+  49% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+@keyframes hide {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

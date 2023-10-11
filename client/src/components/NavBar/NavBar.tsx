@@ -19,7 +19,11 @@ const navItems: Items = [
 export default function NavBar() {
   const router = useRouter();
   return (
-    <div className={styles.NavBar}>
+    <div
+      className={`${styles.NavBar} ${
+        router.route != "/" ? styles.NavBarActive : ""
+      }`}
+    >
       {navItems.map(({ id, name, path }) => (
         <div className={styles.link_wrapper} key={id}>
           <Link

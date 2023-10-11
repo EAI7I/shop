@@ -1,0 +1,11 @@
+.arrowPrev {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.arrowNext {
+  cursor: pointer;
+}
+.arrowBlock {
+  display: flex;
+  align-items: center;
+}

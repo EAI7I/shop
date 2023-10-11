@@ -1,11 +1,16 @@
 .card {
   background-color: #ffffff;
-  max-width: 47.619%;
+  // max-width: 47.619%;
   width: 215.25px;
   display: flex;
   flex-direction: column;
   padding: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
 }
 .cardImage {
   width: 100%;
@@ -16,4 +21,7 @@
   font-weight: 600;
   font-size: 21px;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 65px;
 }

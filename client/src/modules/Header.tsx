@@ -15,7 +15,6 @@ const sliderItems = sliderImages.map((image, index) => (
 export default function Header() {
   return (
     <>
-      <HeaderBar />
       <NavBar />
       <Slider sliderItems={sliderItems} />
     </>

@@ -12,8 +12,9 @@ $base_padding: 0px 40px;
   font-size: 18px;
 }
 .active {
-  color: #ff0000;
+  color: #ffffff;
 }
+
 .NavBar {
   background-color: rgba(0, 0, 0, 0.578);
   display: flex;
@@ -27,7 +28,13 @@ $base_padding: 0px 40px;
   &:hover {
     background-color: #ffffff;
     transition: 0.7s;
+    .link {
+      color: #000000;
+    }
   }
+}
+.NavBarActive {
+  background-color: $white;
 }
 .link_wrapper {
   height: 100%;
