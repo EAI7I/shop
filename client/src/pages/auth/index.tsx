@@ -1,6 +1,6 @@
 import Input from "@/ui/Input/Input";
 import Button from "@/ui/Button/Button";
-import styles from "./signup.module.scss";
+import styles from "./auth.module.scss";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 const toogleText = {
@@ -12,7 +12,7 @@ const toogleText = {
   signin: {
     title: "Привет, друг!",
     subtitle: "Зарегистрируйся, чтобы получить доступ",
-    btnText: "Зарегистрироваться",
+    btnText: "Регистрация",
   },
 };
 export default function Signup() {
@@ -64,6 +64,20 @@ export default function Signup() {
             >
               {toogleBlockText.btnText}
             </Button>
+          </div>
+          <div
+            className={classNames(
+              styles.toggleContainerMob,
+              styles[`animated_${actionState}`]
+            )}
+            onClick={() => {
+              actionState == "signin"
+                ? setActionState("signup")
+                : setActionState("signin");
+            }}
+          ></div>
+          <div className={styles.toggleContainerMobText}>
+            {toogleBlockText.btnText}
           </div>
           <div
             className={classNames(
