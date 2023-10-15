@@ -3,27 +3,20 @@ import Button from "@/ui/Button/Button";
 import styles from "./auth.module.scss";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-const toogleText = {
-  signup: {
-    title: "Добро пожаловать",
-    subtitle: "Введите свои данные чтобы получить доступ",
-    btnText: "Войти",
-  },
-  signin: {
-    title: "Привет, друг!",
-    subtitle: "Зарегистрируйся, чтобы получить доступ",
-    btnText: "Регистрация",
-  },
-};
+import { toogleText } from "./constants";
+import { useSignUpForm, useSignInForm } from "./hooks";
+
 export default function Signup() {
   const [actionState, setActionState] = useState("signup");
   const [toogleBlockText, setToogleBlockText] = useState(
     toogleText[actionState]
   );
-
+  const { signUpFormAction, onSubmitSignUp } = useSignUpForm();
+  const { signInFormAction, onSubmitSignIn } = useSignInForm();
   useEffect(() => {
     setToogleBlockText(toogleText[actionState]);
   }, [actionState]);
+
   return (
     <>
       <div className={styles.pageWrapper}>
@@ -36,13 +29,37 @@ export default function Signup() {
             )}
           >
             <h2 className={styles.title}>Cоздать профиль</h2>
-            <form action="">
-              <Input type="text" placeholder="Имя" />
-              <Input type="email" placeholder="E-mail" />
-              <Input type="tel" placeholder="Телефон" />
-              <Input type="password" placeholder="Пароль" />
+            <form onSubmit={onSubmitSignIn}>
+              <Input
+                type="text"
+                placeholder="Имя"
+                hookForm={signInFormAction}
+                name="name"
+              />
+              <Input
+                placeholder="E-mail"
+                hookForm={signInFormAction}
+                name="email"
+              />
+
+              <Input
+                type="tel"
+                placeholder="Телефон"
+                hookForm={signInFormAction}
+                name="tel"
+              />
+              <Input
+                type="password"
+                placeholder="Пароль"
+                hookForm={signInFormAction}
+                name="password"
+              />
+              <div className={styles.centerBtn}>
+                <Button name={"primaryPurpleBtn"} type="submit">
+                  Регистрация
+                </Button>
+              </div>
             </form>
-            <Button name={"primaryPurpleBtn"}>Регистрация</Button>
           </div>
 
           <div
@@ -87,11 +104,24 @@ export default function Signup() {
             )}
           >
             <h2 className={styles.title}>Войти</h2>
-            <form action="">
-              <Input type="email" placeholder="E-mail" />
-              <Input type="password" placeholder="Пароль" />
+            <form onSubmit={onSubmitSignUp}>
+              <Input
+                placeholder="E-mail"
+                hookForm={signUpFormAction}
+                name="email"
+              />
+              <Input
+                type="password"
+                placeholder="Пароль"
+                hookForm={signUpFormAction}
+                name="password"
+              />
+              <div className={styles.centerBtn}>
+                <Button name={"primaryPurpleBtn"} type="submit">
+                  Войти
+                </Button>
+              </div>
             </form>
-            <Button name={"primaryPurpleBtn"}>Войти</Button>
           </div>
         </div>
       </div>

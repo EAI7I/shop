@@ -35,7 +35,7 @@
   flex-direction: column;
   width: 100%;
 }
-.authFormWrapper form input:not(:last-child) {
+.authFormWrapper form > :not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -63,11 +63,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100%;
   position: absolute;
   padding: 0 60px;
   border-radius: 10px;
+}
+.formWrapper h2 {
+  padding-bottom: 30px;
 }
 .signUpForm {
   top: 0;
@@ -138,6 +141,9 @@
 
   display: none;
 }
+.centerBtn {
+  align-self: center;
+}
 @keyframes backgroundRotation {
   0% {
     background-position: 0% 80%;
@@ -188,9 +194,7 @@
     justify-content: center;
     transform: none;
   }
-  .formWrapper *:not(:last-child) {
-    margin-bottom: 10%;
-  }
+
   .signInForm.signup {
     transform: none;
     animation: none;
@@ -232,11 +236,11 @@
   }
 
   .animated_signup {
-    animation: scaleToogleWrapperMob 2s linear 0s 1 normal;
+    animation: scaleToogleWrapperMob 1.3s linear 0s 1 normal;
     z-index: 1000;
   }
   .animated_signin {
-    animation: scaleToogleWrapperMob2 2s linear 0s 1 normal;
+    animation: scaleToogleWrapperMob2 1.3s linear 0s 1 normal;
     z-index: 1000;
   }
   .toggleContainerMobText {

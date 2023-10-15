@@ -7,14 +7,20 @@ type ClassNames = "primaryPurpleBtn" | "secondaryPurpleBtn";
 interface ButtonPropsType {
   name?: ClassNames | "";
   children?: any;
+  type?: string;
 }
-// ButtonPropsType | ButtonHTMLAttributes<HTMLButtonElement>
-export default function Button({ name = "", children, ...rest }: any) {
+export default function Button({
+  name = "",
+  children,
+  type,
+  ...rest
+}: ButtonPropsType & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <>
       <button
         className={classNames(styles.button, styles[name])}
         onClick={rest.onClick}
+        type={type}
       >
         {children}
       </button>
