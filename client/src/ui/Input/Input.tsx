@@ -10,6 +10,7 @@ export default function Input({
   placeholder,
   hookForm,
   name,
+  autoComplete,
 }: React.InputHTMLAttributes<HTMLInputElement> & inputPropsType) {
   return (
     <div className={styles.customInputWraper}>
@@ -19,6 +20,7 @@ export default function Input({
         placeholder={placeholder}
         {...hookForm?.register(name)}
         aria-invalid={hookForm?.formState?.errors?.[name || ""] ? true : false}
+        autoComplete={autoComplete}
       />
       <p className={styles.errorText}>
         {hookForm?.formState?.errors?.[name || ""]?.message}

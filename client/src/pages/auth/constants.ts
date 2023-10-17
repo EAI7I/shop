@@ -12,7 +12,7 @@ export const toogleText = {
   },
 };
 
-export const signUpFormSchema = yup.object({
+export const signInFormSchema = yup.object({
   email: yup
     .string()
     .email("Введите корректный адрес электронной почты")
@@ -22,7 +22,7 @@ export const signUpFormSchema = yup.object({
     .min(6, "Пароль должен состоять хотя бы из 6 символов")
     .required("Введите пароль"),
 });
-export const signInFormSchema = yup.object({
+export const signUpFormSchema = yup.object({
   name: yup.string().required("Введите имя"),
   email: yup
     .string()
