@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./NavBar.module.scss";
 import { useRouter } from "next/router";
+import classNames from "classnames";
 
 type Item = {
   id: number;
@@ -20,9 +21,10 @@ export default function NavBar() {
   const router = useRouter();
   return (
     <div
-      className={`${styles.NavBar} ${
+      className={classNames(
+        styles.NavBar,
         router.route != "/" ? styles.NavBarActive : ""
-      }`}
+      )}
     >
       {navItems.map(({ id, name, path }) => (
         <div className={styles.link_wrapper} key={id}>

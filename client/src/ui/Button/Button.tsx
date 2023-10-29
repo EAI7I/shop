@@ -4,23 +4,21 @@ import classNames from "classnames";
 import styles from "./Button.module.scss";
 type ClassNames = "primaryPurpleBtn" | "secondaryPurpleBtn";
 
-interface ButtonPropsType {
+interface ButtonPropsType extends ButtonHTMLAttributes<HTMLButtonElement> {
   name?: ClassNames | "";
   children?: any;
-  type?: string;
 }
 export default function Button({
   name = "",
   children,
-  type,
   ...rest
-}: ButtonPropsType & ButtonHTMLAttributes<HTMLButtonElement>) {
+}: ButtonPropsType) {
   return (
     <>
       <button
         className={classNames(styles.button, styles[name])}
         onClick={rest.onClick}
-        type={type}
+        type={rest.type}
       >
         {children}
       </button>

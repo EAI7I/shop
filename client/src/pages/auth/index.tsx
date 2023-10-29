@@ -6,6 +6,10 @@ import classNames from "classnames";
 import { toogleText } from "./constants";
 import { useSignUpForm, useSignInForm } from "./hooks";
 
+enum State {
+  signup = "signup",
+  signin = "signin",
+}
 export default function Signup() {
   const [actionState, setActionState] = useState("signin");
   const [toogleBlockText, setToogleBlockText] = useState(
@@ -15,9 +19,9 @@ export default function Signup() {
   const { signInFormAction, onSubmitSignIn } = useSignInForm();
 
   const toogleButtonHandler = () => {
-    actionState == "signin"
-      ? setActionState("signup")
-      : setActionState("signin");
+    actionState == State.signin
+      ? setActionState(State.signup)
+      : setActionState(State.signin);
   };
 
   useEffect(() => {

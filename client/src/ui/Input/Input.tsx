@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Input.module.scss";
 
-interface inputPropsType {
+interface inputPropsType extends React.InputHTMLAttributes<HTMLInputElement> {
   hookForm?: any;
 }
 export default function Input({
@@ -11,7 +11,7 @@ export default function Input({
   hookForm,
   name,
   autoComplete,
-}: React.InputHTMLAttributes<HTMLInputElement> & inputPropsType) {
+}: inputPropsType) {
   return (
     <div className={styles.customInputWraper}>
       <input
