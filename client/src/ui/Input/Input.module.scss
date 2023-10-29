@@ -1,0 +1,18 @@
+.customInput {
+  outline: 0;
+  border: none;
+  background-color: #eee;
+  padding: 16px 23px;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.customInput[aria-invalid="true"] {
+  border: 1px solid red;
+}
+.errorText {
+  padding-left: 10px;
+  color: red;
+}

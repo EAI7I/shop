@@ -6,12 +6,14 @@ export default function HeaderBar() {
   return (
     <div className={styles.header_container}>
       <div className={styles.logo}>
-        <Image
-          src={"images/header/main_logo.svg"}
-          alt="logo"
-          width={150}
-          height={50}
-        ></Image>
+        <Link href={`/`}>
+          <Image
+            src={"images/header/main_logo.svg"}
+            alt="logo"
+            width={150}
+            height={50}
+          ></Image>
+        </Link>
       </div>
       <div className={styles.search}>
         <div className={styles.input_wrapper}>
@@ -33,6 +35,7 @@ export default function HeaderBar() {
         </button>
       </div>
       <div className={styles.cart}></div>
+      <Link href={"auth"}>регистрация</Link>
     </div>
   );
 }

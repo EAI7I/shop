@@ -1,0 +1,271 @@
+.pageWrapper {
+  --gradien-color-first: rgb(225 228 251);
+  --gradien-color-second: rgb(66 113 228);
+  --gradien-color-third: rgb(66 113 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(
+    55deg,
+    var(--gradien-color-first),
+    var(--gradien-color-second),
+    var(--gradien-color-third)
+  );
+  animation: backgroundRotation 10s ease-in-out 0s infinite alternate-reverse;
+  background-size: 200%;
+}
+.authFormWrapper {
+  position: relative;
+  padding: 56px 48px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  width: 1024px;
+  max-width: 80%;
+  min-height: 480px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.authFormWrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.authFormWrapper form > :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.toggleContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.9s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+  background: linear-gradient(to right, #5c6bc0, #512da8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 36px;
+}
+.formWrapper {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  padding: 0 60px;
+  border-radius: 10px;
+}
+.formWrapper h2 {
+  padding-bottom: 30px;
+}
+.signUpForm {
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+.signInForm {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+.toggleContainer h2 {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+}
+.toggleContainer h4 {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.toggleContainer * {
+  margin-bottom: 20px;
+}
+.toggleContainer.signup {
+  transform: translateX(-100%);
+  border-radius: 0px 150px 100px 0px;
+}
+.toggleContainer.signin {
+  transform: translateX(0%);
+}
+.signInForm.signup {
+  opacity: 0;
+  transform: translateX(30%);
+}
+.signUpForm.signin {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+.signUpForm.signup {
+  opacity: 1;
+}
+.signInForm.signin {
+  opacity: 1;
+}
+.toggleContainerMob {
+  display: none;
+}
+.toggleContainerMobText {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  width: 150px;
+  height: 150px;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1001;
+  animation: fadeIn 1s normal 0s;
+  display: none;
+}
+.centerBtn {
+  align-self: center;
+}
+@keyframes backgroundRotation {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 60% 100%;
+  }
+  100% {
+    background-position: 0% 80%;
+  }
+}
+@media (max-width: 1100px) {
+  .formWrapper {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 670px) {
+  .authFormWrapper {
+    height: 55%;
+    padding: 56px 20px;
+  }
+  .formWrapper {
+    position: relative;
+    opacity: 1;
+    width: 100%;
+    justify-content: center;
+    transform: none;
+  }
+
+  .signInForm.signin {
+    transform: none;
+    animation: none;
+    display: flex;
+    animation: fadeIn 1s normal 0s;
+  }
+  .signUpForm.signin {
+    animation: none;
+    display: none;
+  }
+  .signInForm.signup {
+    animation: none;
+    display: none;
+  }
+  .signUpForm.signup {
+    transform: none;
+    animation: fadeIn 1s normal 0s;
+    display: flex;
+  }
+  .toggleContainer {
+    display: none;
+  }
+  .toggleContainerMob {
+    display: block;
+    position: absolute;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    height: 300px;
+    width: 300px;
+    right: -120px;
+    top: -120px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+  }
+
+  .animated_signup {
+    animation: scaleToogleWrapperMob 1.3s linear 0s 1 normal;
+    z-index: 1000;
+  }
+  .animated_signin {
+    animation: scaleToogleWrapperMob2 1.3s linear 0s 1 normal;
+    z-index: 1000;
+  }
+
+  .toggleContainerMobText {
+    display: flex;
+  }
+}
+@keyframes scaleToogleWrapperMob {
+  0% {
+    transform: scale(1);
+    z-index: 1002;
+  }
+  45% {
+    transform: scale(9);
+    z-index: 1002;
+  }
+  55% {
+    transform: scale(9);
+    z-index: 1002;
+  }
+  100% {
+    transform: scale(1);
+    z-index: 1002;
+  }
+}
+@keyframes scaleToogleWrapperMob2 {
+  0% {
+    transform: scale(1);
+    z-index: 1002;
+  }
+  45% {
+    transform: scale(9);
+    z-index: 1002;
+  }
+  55% {
+    transform: scale(9);
+    z-index: 1002;
+  }
+  100% {
+    transform: scale(1);
+    z-index: 1002;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

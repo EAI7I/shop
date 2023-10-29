@@ -1,0 +1,20 @@
+.productPageWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 30px;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+}
+.productTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+.productPrice {
+  font-weight: 600;
+  font-size: 21px;
+  padding-top: 5%;
+}
