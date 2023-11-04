@@ -8,8 +8,8 @@ export default function PopularCategoties() {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>ПОПУЛЯРНЫЕ КАТЕГОРИИ</h2>
       <div className={styles.banners}>
-        {categories.map((item) => {
-          return <CategoryBanner {...item} />;
+        {categories.map((item, index) => {
+          return <CategoryBanner {...item} key={index} />;
         })}
       </div>
     </div>

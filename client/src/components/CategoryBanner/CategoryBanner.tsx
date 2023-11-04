@@ -37,7 +37,12 @@ export default function CategoryBanner({
         <div className={styles.categoryTagWrapper}>
           {subCategories &&
             subCategories.map((subCategory) => {
-              return <CategoryTag categoryName={subCategory.name} />;
+              return (
+                <CategoryTag
+                  categoryName={subCategory.name}
+                  key={subCategory.name}
+                />
+              );
             })}
         </div>
       </div>
