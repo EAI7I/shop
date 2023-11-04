@@ -1,0 +1,19 @@
+.categoryTag {
+  border: 1px solid #908989;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.5s ease-in-out;
+}
+.categoryTag:hover {
+  transform: scale(1.02);
+}
+@media (max-width: 1200px) {
+  .categoryTag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}

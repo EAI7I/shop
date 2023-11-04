@@ -46,11 +46,7 @@ export default function Content() {
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
           {productPageItems.map((productItem, i) => {
-            return (
-              <Link href={`ProductPage/${productItem.id}`} key={productItem.id}>
-                <Card productItem={productItem} />
-              </Link>
-            );
+            return <Card productItem={productItem} />;
           })}
         </div>
         <Pagination

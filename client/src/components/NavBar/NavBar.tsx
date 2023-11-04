@@ -10,11 +10,11 @@ type Item = {
 };
 type Items = Item[];
 const navItems: Items = [
-  { id: 1, name: "Каталог", path: "/" },
-  { id: 2, name: "Новинки", path: "/" },
-  { id: 3, name: "Подборки", path: "/" },
-  { id: 4, name: "Промокод", path: "/" },
-  { id: 5, name: "Акции", path: "/" },
+  { id: 1, name: "Каталог", path: "/catalog" },
+  { id: 2, name: "Новинки", path: "/new" },
+  { id: 3, name: "Подборки", path: "/selections" },
+  { id: 4, name: "Промокод", path: "/promotional" },
+  { id: 5, name: "Акции", path: "/sales" },
 ];
 
 export default function NavBar() {

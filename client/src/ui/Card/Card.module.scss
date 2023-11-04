@@ -1,27 +1,42 @@
 .card {
   background-color: #ffffff;
-  // max-width: 47.619%;
   width: 215.25px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   margin-bottom: 20px;
-  cursor: pointer;
-}
-.card:hover {
-  transform: scale(1.03);
-  transition: 0.5s;
+  overflow: hidden;
 }
 .cardImage {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.cardImage:hover {
+  transform: scale(1.2);
+  transform-origin: bottom;
+}
+.cardInfo {
+  padding: 10px;
+}
+.cardPrice {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .cardName {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 21px;
   margin-bottom: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   height: 65px;
+  cursor: pointer;
+}
+.cardName:hover {
+  color: #1551e5;
+}
+.cardHref {
+  cursor: auto;
 }

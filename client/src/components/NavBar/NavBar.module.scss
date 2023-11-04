@@ -32,6 +32,9 @@ $base_padding: 0px 40px;
       color: #000000;
     }
   }
+  &:hover * {
+    color: #030303;
+  }
 }
 .NavBarActive {
   background-color: $white;
