@@ -1,0 +1,60 @@
+.wrapper {
+  padding: 20px 10%;
+}
+.picture {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.bannerPicture {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: top;
+}
+.bannerText {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 40%;
+  padding-bottom: 5px;
+}
+.bannerText * {
+  margin-bottom: 10px;
+}
+.bannerText h4 {
+  font-weight: 600;
+}
+.link {
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .bannerText {
+    top: 15%;
+  }
+}
+@media (max-width: 1200px) {
+  .bannerText {
+    top: 5%;
+  }
+}
+@media (max-width: 920px) {
+  .bannerText {
+    width: 80%;
+    top: auto;
+    bottom: 10%;
+  }
+}
+@media (max-width: 570px) {
+  .bannerText {
+    bottom: 0%;
+    width: 95%;
+  }
+}
+@media (max-width: 396px) {
+  .bannerText * {
+    margin-bottom: 0;
+  }
+}
