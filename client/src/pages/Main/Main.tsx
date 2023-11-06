@@ -3,6 +3,7 @@ import Slider from "@/components/Slider/Slider";
 import { adBanners } from "./data";
 
 import AdBanner from "@/modules/AdBanner/AdBanner";
+import SalesBlock from "@/modules/SalesBlock/SalesBlock";
 
 const sliderImages = [
   "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week43/27_10/bnr-w44s3.webp",
@@ -21,6 +22,7 @@ export default function Main() {
       <Slider sliderItems={sliderItems} />
       <PopularCategoties />
       <AdBanner {...firstBanner} />
+      <SalesBlock />
     </>
   );
 }

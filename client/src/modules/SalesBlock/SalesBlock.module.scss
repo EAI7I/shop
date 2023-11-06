@@ -1,0 +1,26 @@
+.wrapper {
+  padding: 20px 10%;
+}
+.banners {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 33%);
+  justify-content: space-between;
+}
+.title {
+  margin-bottom: 20px;
+}
+.title:hover {
+  color: #113fd4;
+  transition: all 0.5s;
+}
+@media (max-width: 1100px) {
+  .banners {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (max-width: 720px) {
+  .banners {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
