@@ -1,11 +1,12 @@
 package ru.shop.demo.models;
 
 import java.util.List;
-
+import java.util.Set;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,18 +33,6 @@ public class Product {
     @ElementCollection
     private List<Long> photoIds;
 
-    //@Nullable
-    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    //@JoinColumn(name = "cart_id")
-    //private Cart cart;
-
-    public Product(String name, String description, String price) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
-
-    //public void setCart(@Nullable Cart cart) {
-    //    this.cart = cart;
-    //}
+    @OneToMany(mappedBy = "product")
+    private Set<CartProductsCount> counts;
 }

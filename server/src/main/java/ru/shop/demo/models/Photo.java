@@ -20,12 +20,4 @@ public class Photo {
     private Long id;
 
     private String url;
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getUrl() {
-        return url;
-    }
 }

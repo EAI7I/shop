@@ -33,22 +33,25 @@ public class User implements UserDetails {
   @Id
   @GeneratedValue
   private Integer id;
+
   private String firstname;
+
   private String lastname;
 
   @Column(unique=true)
   private String email;
+
   private String password;
+
+  @Column(unique=true)
   private String phone;
 
   @Enumerated(EnumType.STRING)
   private Role role;
 
   @OneToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.ALL)
-  @JoinColumn(name = "cart_id")
   @Builder.Default
   private Cart cart = new Cart();
-
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {

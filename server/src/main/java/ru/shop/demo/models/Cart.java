@@ -1,8 +1,6 @@
 package ru.shop.demo.models;
 
 import java.util.Set;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -24,25 +22,9 @@ public class Cart {
     @GeneratedValue
     private Long id;
 
-    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "cart")
     private User user;
 
-    //@OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-    //private Set<Product> product;
-
-    //public Set<Product> getProduct() {
-    //    return product;
-    //}
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    //public void setProduct(Set<Product> product) {
-    //    this.product = product;
-
-    //    for (Product p : product) {
-    //        p.setCart(this);
-    //    }
-    //}
+    @OneToMany(mappedBy = "cart")
+    Set<CartProductsCount> counts;
 }
