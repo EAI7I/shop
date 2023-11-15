@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 20px 10%;
+}
+
+.brandLogo {
+  filter: brightness(0);
+  transition: all 0.5s;
+  padding-left: 10px;
+  &:hover {
+    filter: brightness(1);
+  }
+}
+.title {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .brandLogo {
+    width: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .brandLogo {
+    width: 50px;
+  }
+}

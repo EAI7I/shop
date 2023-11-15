@@ -1,9 +1,8 @@
 .card {
   background-color: #ffffff;
-  width: 215.25px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   overflow: hidden;
 }
 .cardImage {

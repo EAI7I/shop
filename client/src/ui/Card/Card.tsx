@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Card.module.scss";
 import Button from "../Button/Button";
+
+export interface productItem {
+  imageUrl: string;
+  name: string;
+  price: string | number;
+  id: number;
+}
 interface CardProps {
-  productItem: {
-    imageUrl: string;
-    name: string;
-    price: string | number;
-    id: number;
-  };
+  productItem: productItem;
 }
 
 export default function Card({ productItem }: CardProps) {

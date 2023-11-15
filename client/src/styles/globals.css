@@ -5,10 +5,17 @@
   color: #333333;
   font-family: GothamPro, sans-serif;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-sides-offset: 0;
+  padding: 0px 8px;
+  background-color: #3333337c;
+}
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  --swiper-navigation-size: 25px;
-  color: #000000;
+  --swiper-navigation-size: 20px;
+  color: #ffffff;
+  --swiper-navigation-sides-offset: 0;
 }
 
 h2 {
