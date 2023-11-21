@@ -1,7 +1,9 @@
-import styles from "./ProductPage.module.scss";
+import { setLastVisitedProducts } from "./../../../utils";
 import Image from "next/image";
-
 import mock from "./../../../mock.json";
+
+import styles from "./ProductPage.module.scss";
+import { useEffect } from "react";
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
   return {
@@ -9,6 +11,9 @@ export const getServerSideProps = async (context) => {
   };
 };
 export default function ProductPage({ product }) {
+  useEffect(() => {
+    setLastVisitedProducts(product.id);
+  }, []);
   return (
     <>
       <div className={styles.productPageWrapper}>

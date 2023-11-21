@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import classNames from "classnames";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Swiper as SwiperType, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -9,21 +8,25 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import styles from "./BrandsSlider.module.scss";
 import { brands } from "./data";
+import { useRef } from "react";
 
 export default function BrandsSlider() {
+  const swiperRef = useRef<SwiperType>();
+
   return (
     <div className={styles.wrapper}>
+      <div
+        className={styles.arrowPrev}
+        onClick={() => swiperRef.current?.slidePrev()}
+      ></div>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, A11y]}
+        modules={[Navigation]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         slidesPerView={6}
         grabCursor
         wrapperClass={styles.sliderContainer}
-        navigation
-        injectStyles={[
-          `swiper-button-prev:{
-          display:none;
-        }`,
-        ]}
         breakpoints={{
           1200: {
             slidesPerView: 6,
@@ -54,6 +57,10 @@ export default function BrandsSlider() {
           );
         })}
       </Swiper>
+      <div
+        className={styles.arrowNext}
+        onClick={() => swiperRef.current?.slideNext()}
+      ></div>
     </div>
   );
 }

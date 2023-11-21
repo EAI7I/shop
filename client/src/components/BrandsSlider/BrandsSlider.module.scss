@@ -1,12 +1,34 @@
 .wrapper {
   padding: 20px 10%;
+  display: flex;
+  align-items: center;
 }
 .sliderContainer {
-  padding: 0 5%;
+  text-align: center;
+}
+.arrowPrev,
+.arrowNext {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s;
+  filter: brightness(0);
+  &:hover {
+    filter: brightness(1);
+  }
+}
+.arrowPrev {
+  transform: rotate(180deg);
+}
+.arrowPrev::after {
+  content: url(../../../public/images/BrandsSlider/arrow.svg);
+}
+.arrowNext::after {
+  content: url(../../../public/images/BrandsSlider/arrow.svg);
 }
 .brandLogo {
   filter: brightness(0);
   transition: all 0.5s;
+  user-select: none;
   padding-left: 10px;
   &:hover {
     filter: brightness(1);
