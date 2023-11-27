@@ -41,3 +41,14 @@
     color: #ffffff;
   }
 }
+@media (max-width: 768px) {
+  .header_container {
+    padding: 15px 15px;
+    & .authLink {
+      display: none;
+    }
+  }
+  .search {
+    width: 80%;
+  }
+}

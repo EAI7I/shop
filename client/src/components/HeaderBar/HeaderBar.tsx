@@ -7,12 +7,21 @@ export default function HeaderBar() {
     <div className={styles.header_container}>
       <div className={styles.logo}>
         <Link href={`/`}>
-          <Image
-            src={"images/header/main_logo.svg"}
-            alt="logo"
-            width={150}
-            height={50}
-          ></Image>
+          <picture>
+            <source
+              srcSet={"images/header/main_logo_mob.svg"}
+              media="(max-width:768px)"
+              width={40}
+              height={40}
+            />
+            <Image
+              src={"images/header/main_logo.svg"}
+              alt="logo"
+              width={150}
+              height={50}
+              className={styles.logo}
+            ></Image>
+          </picture>
         </Link>
       </div>
       <div className={styles.search}>
@@ -35,7 +44,9 @@ export default function HeaderBar() {
         </button>
       </div>
       <div className={styles.cart}></div>
-      <Link href={"auth"}>регистрация</Link>
+      <Link href={"auth"} className={styles.authLink}>
+        регистрация
+      </Link>
     </div>
   );
 }

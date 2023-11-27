@@ -47,3 +47,8 @@ $base_padding: 0px 40px;
     background-color: #0026ff;
   }
 }
+@media (max-width: 767px) {
+  .NavBar {
+    display: none;
+  }
+}
