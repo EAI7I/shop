@@ -9,6 +9,29 @@ export const adBanners = [
     buttonText: "Купить",
   },
 ];
+export const sliderImages = [
+  {
+    src: "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week44/31_10/bnr-w44s6.webp",
+    srcSet:
+      "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week46/16_11/bnr-w47s6-mv.webp",
+  },
+  {
+    src: "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week43/27_10/bnr-w44s3.webp",
+    srcSet:
+      "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week46/16_11/bnr-w47s1-mv.webp",
+  },
+  {
+    src: "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week44/31_10/bnr-w44s7.webp",
+    srcSet:
+      "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week46/16_11/bnr-w47s8-mv.webp",
+  },
+  {
+    src: "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week44/31_10/bnr-w44s9.webp",
+    srcSet:
+      "https://cdn.sportmaster.ru/upload/content/cmsgate/ru_sm/smprod/dip_content/2023/sm30/week46/16_11/bnr-w47s5-mv.webp",
+  },
+];
+
 export const cardsHitData = [
   {
     id: 1,
