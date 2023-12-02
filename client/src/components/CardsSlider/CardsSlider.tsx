@@ -18,12 +18,18 @@ export default function CardsSlider({ cards, title }: CardsSliderProps) {
       <h2 className={styles.title}>{title}</h2>
       <Swiper
         modules={[Navigation]}
-        slidesPerView={4}
+        slidesPerView={6}
         spaceBetween={30}
         grabCursor
         wrapperClass={styles.sliderContainer}
         navigation
         breakpoints={{
+          2000: {
+            slidesPerView: 6,
+          },
+          1600: {
+            slidesPerView: 5,
+          },
           1200: {
             slidesPerView: 4,
           },

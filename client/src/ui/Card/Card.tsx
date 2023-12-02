@@ -29,7 +29,9 @@ export default function Card({ productItem }: CardProps) {
             className={styles.cardImage}
           ></Image>
           <div className={styles.cardInfo}>
-            <div className={styles.cardName}>{productItem.name}</div>
+            <div className={styles.cardName}>
+              <h3>{productItem.name}</h3>
+            </div>
             <div className={styles.cardPrice}>{productItem.price}</div>
             <Button name="primaryPurpleBtn">В корзину</Button>
           </div>

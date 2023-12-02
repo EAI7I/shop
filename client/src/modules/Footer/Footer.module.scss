@@ -1,0 +1,47 @@
+.wrapper {
+  padding: 20px 10%;
+  background-color: #1551e5;
+  display: flex;
+  flex-direction: column;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 20px 0;
+  & h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  & ul {
+    list-style: none;
+    & li {
+      margin-bottom: 10px;
+      & a {
+        color: #ffffffb4;
+      }
+    }
+  }
+  & .phone {
+    color: #ffffff;
+  }
+}
+.copiright {
+  text-align: center;
+  color: #ffffff;
+}
+.socialMedia {
+  & img {
+    filter: invert(1);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}

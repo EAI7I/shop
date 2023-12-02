@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import mock from "./../../../mock.json";
 import getLastVisitedProducts from "../../../utils/getLastVisitedProducts";
 import MobileButtons from "@/modules/MobileButtons/MobileButtons";
+import Footer from "@/modules/Footer/Footer";
 
 const sliderImages = [
   {
@@ -77,6 +78,7 @@ export default function Main() {
 
       <AdBanner {...firstBanner} />
       <SalesBlock />
+      <Footer />
     </>
   );
 }
