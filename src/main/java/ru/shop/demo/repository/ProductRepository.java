@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductRepository extends JpaRepository<Product, Integer>{
+public interface ProductRepository extends JpaRepository<Product, Long>{
 
      @Query(value = "SELECT p.id AS id, p.name AS name, p.description AS description, p.price AS price, " +
            "(SELECT ARRAY_AGG(ph.url) FROM photo ph " +
