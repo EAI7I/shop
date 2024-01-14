@@ -18,13 +18,13 @@ import ru.shop.demo.DTO.product.ProductResponse;
 import ru.shop.demo.service.ProductService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/product")
 @RequiredArgsConstructor
 class ProductController {
 
    final private ProductService productService;
 
-    @PostMapping(value = "/product/create", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ProductResponse>> createProduct(@RequestBody ProductCreateRequest productRequest) {
         Optional<List<ProductResponse>> products = productService.createProduct(productRequest);
         if (products.isPresent()) {
@@ -34,7 +34,7 @@ class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping(value = "/product/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<ProductResponse> getProductById(@PathVariable("id") long id) {
         Optional<ProductResponse> product = productService.getProductById(id);
         if (product.isPresent()) {
