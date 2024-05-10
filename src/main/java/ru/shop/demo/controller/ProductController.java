@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import ru.shop.demo.DTO.product.ProductCreateRequest;
-import ru.shop.demo.DTO.product.ProductResponse;
+import ru.shop.demo.dto.product.ProductCreateRequest;
+import ru.shop.demo.dto.product.ProductResponse;
 import ru.shop.demo.service.ProductService;
 
 @RestController

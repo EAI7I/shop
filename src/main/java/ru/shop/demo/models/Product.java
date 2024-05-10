@@ -2,11 +2,8 @@ package ru.shop.demo.models;
 
 import java.util.List;
 import java.util.Set;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,15 +21,26 @@ public class Product {
     @GeneratedValue
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     private String description;
 
+    @Column(nullable = false)
     private String price;
 
     @ElementCollection
     private List<Long> photoIds;
 
-    @OneToMany(mappedBy = "product")
-    private Set<CartProductsCount> counts;
+    @Column(nullable = false)
+    private Integer count;
+
+    @ManyToMany(mappedBy = "products")
+    private Set<User> users;
+
+//    @ManyToMany(mappedBy = "products")
+//    private Set<Cart> carts;
+
+    @OneToMany(mappedBy = "products")
+    private Set<OrderProduct> orderProducts;
 }

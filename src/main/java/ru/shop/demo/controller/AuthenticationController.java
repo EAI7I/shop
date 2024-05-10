@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import ru.shop.demo.DTO.auth.AuthenticationRequest;
-import ru.shop.demo.DTO.auth.AuthenticationResponse;
-import ru.shop.demo.DTO.auth.RegisterRequest;
+import ru.shop.demo.dto.auth.AuthenticationRequest;
+import ru.shop.demo.dto.auth.AuthenticationResponse;
+import ru.shop.demo.dto.auth.RegisterRequest;
 import ru.shop.demo.service.AuthenticationService;
 
 @RestController

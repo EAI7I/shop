@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import ru.shop.demo.DTO.product.ProductCreateRequest;
-import ru.shop.demo.DTO.product.ProductResponse;
+import ru.shop.demo.dto.product.ProductCreateRequest;
+import ru.shop.demo.dto.product.ProductResponse;
 import ru.shop.demo.models.Photo;
 import ru.shop.demo.models.Product;
 import ru.shop.demo.repository.PhotoRepository;

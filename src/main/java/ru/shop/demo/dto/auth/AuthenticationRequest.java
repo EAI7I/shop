@@ -1,4 +1,4 @@
-package ru.shop.demo.DTO.auth;
+package ru.shop.demo.dto.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

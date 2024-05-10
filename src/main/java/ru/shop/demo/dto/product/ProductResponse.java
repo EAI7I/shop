@@ -1,4 +1,4 @@
-package ru.shop.demo.DTO.product;
+package ru.shop.demo.dto.product;
 
 import java.util.List;
 

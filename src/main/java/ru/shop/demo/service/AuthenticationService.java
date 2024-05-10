@@ -6,9 +6,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import ru.shop.demo.DTO.auth.AuthenticationRequest;
-import ru.shop.demo.DTO.auth.AuthenticationResponse;
-import ru.shop.demo.DTO.auth.RegisterRequest;
+import ru.shop.demo.dto.auth.AuthenticationRequest;
+import ru.shop.demo.dto.auth.AuthenticationResponse;
+import ru.shop.demo.dto.auth.RegisterRequest;
 import ru.shop.demo.config.JwtService;
 import ru.shop.demo.models.Role;
 import ru.shop.demo.models.User;

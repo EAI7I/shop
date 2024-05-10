@@ -1,6 +1,6 @@
 package ru.shop.demo.repository;
 
-import ru.shop.demo.DTO.product.ProductResponse;
+import ru.shop.demo.dto.product.ProductResponse;
 import ru.shop.demo.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
